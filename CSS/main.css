@@ -1,0 +1,458 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* START OF NAVBAR*/
+nav {
+  background: white;
+  padding: 0 .5rem;
+  position: fixed; /* Set the navbar to fixed position */
+  width:100%;;
+  top:0;
+  z-index: 100;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.menu,
+.submenu {   
+  list-style-type: none;
+
+}
+.logo{
+  font-size: 20px;
+  padding: 0 0;
+  font-family: 'Fredoka One',cursive;
+  color: #111;
+}
+.item {
+  padding: .3rem;
+}
+.item.button {
+  padding: .3rem;
+}
+.item a:hover,
+.item a:hover::after {
+  color: #ccc;
+  background-color: rgb(167, 149, 122);
+  transition-duration: 1100ms;
+}
+/*END OF NAVBAR*/
+
+.carousel-container{
+  margin-top: 3rem;
+}
+/* START OF CAROUSEL*/
+.carousel-cell {
+  width: 90%;
+  counter-increment: carousel js-flickity carousel-class img;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+}
+.carousel-cell.is-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-cell.is-selected img{
+  opacity: 1;
+}
+.carousel-cell::before{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  content: counter(carousel js-flickity carousel-class img);
+  font-size: 80px;
+  background-color: black;
+}
+.carousel-cell img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .5;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell {
+    height: 35rem;
+  }
+}
+@media screen and ( min-width: 960px ) {
+  .carousel-cell {
+    width: 60%;
+    height: 50rem;
+  }
+}
+.flickity-button {
+  background:transparent;
+}
+/* hide disabled button */
+.flickity-button:disabled {
+  display: none;
+}
+/* buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  opacity: 0.6;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: black;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* closer to edge */
+.flickity-prev-next-button.previous { left: 0; }
+.flickity-prev-next-button.next { right: 0; }
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+/* END OF CAROUSEL*/
+
+
+/* START OF HOME*/
+.Home{
+  padding:1rem;
+}
+.Home h1{
+  margin-top: 2.6rem;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.Home a{
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+/* END OF HOME*/
+
+/* START OF RESERVE*/
+.Reserve{
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding:1rem;
+}
+.Reserve .reserve.link {
+  width:90%;
+  border:1px solid;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+.Reserve .reserve.link:hover {
+  background-color: rgb(77, 47, 1);
+  opacity: .4;
+  color:rgb(223, 223, 223);
+  transition-duration: 1200ms;
+}
+/* END OF HOME*/
+
+/* START OF BLOG */
+.Blog{
+  padding:1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.Blog h1{
+  margin-top: 2.6rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto;
+
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+.popup .blog_pic_one {
+  height: auto;
+  width: 100%;
+}
+
+.popup .blog_head_one {
+  font-size: 30px;
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+}
+
+.popup .blog_head_one {
+  size: 12px;
+  text-align: left;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/* END OF BLOG */
+
+.About.Me{
+  padding:1rem;
+  margin-top: 3rem;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.About.Me a{
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+.Contact{
+  padding:1rem;
+  margin-top: 3rem;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.contact-container{
+  display: block;
+  text-align:left;
+  list-style-type:none;
+  padding:1rem;
+}
+.contact-container li{
+  padding:1rem;
+}
+.SNS{
+  text-align:center;
+  padding:1rem;
+}
+.fa {
+  padding: 1rem;
+  font-size: 30px;
+  border-radius:50%;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-instagram {  
+  background: rgb(167, 149, 122); 
+  color: white;  
+}  
+
+
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+  color: gray;
+  font-family: 'Poppins', sans-serif;
+  transition-duration: 500ms;
+}
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+.button.secondary { /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+
+
+
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: block;
+}
+.has-submenu i {
+  font-size: 12px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900; 
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+.subitem a {
+  padding: 10px 15px;
+}
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+  .menu {
+      justify-content: center;
+  }
+  .logo {
+      flex: 1;
+  }
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+  }
+  /* Button up from tablet screen */
+  .menu li.button a {
+      padding: 10px 15px;
+      margin: 5px 0;
+  }
+  .button a {
+      background: white;
+      border: 1px rgb(167, 149, 122);
+  }
+  .button a:hover {
+      text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+    background: rgb(167, 149, 122);
+    border: 1px rgb(167, 149, 122);
+  }
+  .grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto;
+  }
+  .carousel-cell {
+    width: 70%
+  }
+}
+
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+  .menu {
+      align-items: flex-start;     
+      flex-wrap: nowrap;
+      background: none;
+  }
+  .logo {
+      order: 0;
+      padding-top: 1.5rem;
+  }
+  .item {
+      order: 1;
+      position: relative;
+      display: block; 
+      width: auto;
+  }
+  .button {
+      order: 2;
+  }
+  .submenu-active .submenu {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 68px;
+      background: #111;
+  }
+  .toggle {
+      display: none;
+  }
+  .submenu-active {
+      border-radius: 0;
+  }
+  .grid-container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .carousel-cell {
+    width: 70%;
+  }
+}
+

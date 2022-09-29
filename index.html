@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Good Space</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="icon" href="images/CuteDonut.png" type="image/png">
+
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/flickity.css" media="screen">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <ul class="menu">
+    <a class="logo" href="">GOOD SPACE</a>
+    <li class="item" id="home"><a href="#Home">HOME</a></li>
+    <li class="item" id="blog"><a href="#Blog">BLOG</a></li>
+    <li class="item" id="aboutMe"><a href="#About Me">ABOUT ME</a></li>
+    <li class="item" id="contact"><a href="#Contact">CONTACT</a></li>
+    <li class="item button" id="reserve"><a href="https://upnow.jp/goodspace" target="_blank">RESERVE</a></li>
+    <li class="toggle" id="toggle"><a><i class="fas fa-bars"></i></a></li>
+  </ul>
+</nav>
+<div class="carousel-container">
+<!-- Flickity HTML init -->
+  <div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true, "pageDots":true}'>
+    <!-- images from unsplash.com -->
+    <div class="carousel-cell">
+      <img src="images/32838816_Unknown.jpg" alt="fruits" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/32839088_Unknown.jpg" alt="submerged" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/32839152_Unknown.jpg" alt="look-out" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/32839184_Unknown.jpg" alt="One World Trade" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/32839376_Unknown.jpg" alt="drizzle" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/32839936_Unknown.jpg" alt="cat nose" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/IMG_8014.JPG" alt="contrail" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/IMG_8019.JPG" alt="golden hour" />
+    </div>
+    <div class="carousel-cell">
+      <img src="images/IMG_8023.JPG" alt="flight formation" />
+    </div>
+  </div>
+</div>
+<div class="Home" id="Home">
+  <h1>Home</h1>
+    <a>新宿　はじめまして</a>
+</div>
+<div class="Reserve">
+  <a class="reserve link" href='https://upnow.jp/goodspace' target='_blank'>Reserve</a>
+</div>
+<div class="Blog" id="Blog">
+  <h1>Blog</h1>
+  <div class="grid-container">
+    <div class="popup" onclick="myFunction()">
+      <img class="blog_pic_one" src="images/32839792_Unknown.jpg" alt="image">
+      <a class="blog_head_one">Blog one</a>
+      <a class="blog_text_one">Blog text stadjslgjsfdjglksdfjsjfklgjsfjl;skdjf;gjsdlfkjg sldfkjgklsdf dsgjs;ldfg slkdfg sdlfkjgskl sldkfjgl;sk l;skdfjg seorijgois jdf sldfjgl;ijers soijg;oisr</a>
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>  
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+      <span class="popuptext" id="myPopup">A Simple Popup!</span>
+    </div>
+</div>
+<div class="About Me" id="About Me">
+  <h1>About Me</h1>
+  <a>MEMMEMEMEMMMEEMEMEMMEMMEM </a>
+</div>
+<div class="Contact" id="Contact">
+  <h1>Contact</h1>
+  <form action="mail_handler.php" method="post">
+    First Name: <input type="text" name="first_name"><br>
+    Last Name: <input type="text" name="last_name"><br>
+    Email: <input type="text" name="email"><br>
+    Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+    <input type="submit" name="submit" value="Submit">
+  </form>
+</div>
+<div class="SNS">
+  <a href="https://www.instagram.com/goodspace_tokyo/" target="_blank" class="fa fa-instagram"></a>  
+</div>
+<script src="main.js"></script>
+<script src="flickity.pkgd.min.js"></script>
+</body>
+</html>
