@@ -155,10 +155,7 @@ a {
 .Spaces h1{
   font-family: 'Barlow Condensed', sans-serif;
 }
-.Spaces .grid-spaces{
-  display: grid;
-  grid-template-columns:repeat(1,1fr);
-}
+
 .Spaces .space-tiles{
   display: grid;
   grid-template-columns:repeat(2,1fr);
@@ -171,6 +168,30 @@ a {
   width:auto;
   height:100%;
 }
+@media screen and ( max-width: 768px ) {
+  .Spaces{
+    padding:1rem;
+  }
+  .Spaces h1{
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .Spaces .space-tiles{
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+  }
+  .Spaces .space-img{
+    width:100%;
+    height:auto;
+  }
+  .Spaces .space-desc{
+    width:auto;
+    height:100%;
+    grid-row-start:row1-start;
+    grid-row-end: row1-end;
+  }
+}
+
 /* START OF RESERVE*/
 .Reserve{
   display:flex;
@@ -482,3 +503,69 @@ a {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+aside {
+  position: fixed;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+aside ul li .indicator {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+aside ul li .active {
+  transform: scale(1.7);
+  transition: transform 200ms ease-in-out;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(odd) {
+  background-color: #ffcc33;
+}
+
+section:nth-child(even) {
+  background-color: #ffb347;
+}
+
+section h1 {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: black;
+}
+
+.first{
+  width: 100%;
+  height: auto;
+  background-image: url('../images/Main_bg.jpg');
+  background-position: center center;
+  background-size: cover;
+}
