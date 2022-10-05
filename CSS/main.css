@@ -79,7 +79,7 @@ a {
 }
 .carousel-cell img{
   width: 100%;
-  height: 100%;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
