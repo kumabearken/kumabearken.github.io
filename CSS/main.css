@@ -10,6 +10,10 @@ body {
 }
 
 /* START OF NAVBAR*/
+.logo-image{
+  width: 50x;
+  height: 50px;
+}
 nav {
   background: white;
   padding: 0 .5rem;
@@ -57,7 +61,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25rem;
+  height: auto;
 }
 .carousel-cell.is-selected {
   display: flex;
@@ -153,11 +157,20 @@ a {
 }
 .Spaces .grid-spaces{
   display: grid;
-  grid-template-columns:repeat(2,1fr);
-  grid-auto-rows: 100px;
-
+  grid-template-columns:repeat(1,1fr);
 }
-
+.Spaces .space-tiles{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+}
+.Spaces .space-img{
+  width:100%;
+  height:auto;
+}
+.Spaces .space-desc{
+  width:auto;
+  height:100%;
+}
 /* START OF RESERVE*/
 .Reserve{
   display:flex;
