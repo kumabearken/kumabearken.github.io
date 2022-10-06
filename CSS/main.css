@@ -565,7 +565,7 @@ section h1 {
 .first{
   width: 100%;
   height: auto;
-  background-image: url('../images/Main_bg.jpg');
+  background-image: url('../images/Main_BG.jpg');
   background-position: center center;
   background-size: cover;
 }
