@@ -2,6 +2,7 @@ const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".menu");
 const contactform = document.getElementById("sendThis");
 const home = document.getElementById("home");
+const spaces = document.getElementById("spaces");
 const blog = document.getElementById("blog");
 const aboutMe = document.getElementById("aboutMe");
 const contact = document.getElementById("contact");
@@ -33,6 +34,7 @@ function myFunction() {
 /* Event Listeners */
 toggle.addEventListener("click", toggleMenu, false);
 home.addEventListener('click', closeMenu,false);
+spaces.addEventListener('click', closeMenu,false);
 blog.addEventListener('click', closeMenu,false);
 aboutMe.addEventListener('click', closeMenu,false);
 contact.addEventListener('click', closeMenu,false);
